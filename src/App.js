@@ -20,7 +20,7 @@ function App() {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/predict", formData);
+      const res = await axios.post("http://http://65.2.177.143:5000/predict", formData);
       const currentDetections = res.data.detections || [];
       const base64Img = `data:image/jpeg;base64,${res.data.image}`;
 

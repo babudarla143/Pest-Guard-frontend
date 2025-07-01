@@ -8,6 +8,8 @@ function App() {
   const [severityReport, setSeverityReport] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+
   const handleFileChange = (e) => {
     setSelectedFile(e.target.files[0]);
   };
@@ -20,7 +22,7 @@ function App() {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://http://65.2.177.143:5000/predict", formData);
+      const res = await axios.post(`${API_BASE_URL}/predict`, formData);
       const currentDetections = res.data.detections || [];
       const base64Img = `data:image/jpeg;base64,${res.data.image}`;
 

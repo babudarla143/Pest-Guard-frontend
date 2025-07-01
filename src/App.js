@@ -232,7 +232,7 @@ const analyzeSeverity = (history) => {
             )
           </p>
           {/* <p><strong>Major Infestation:</strong> {severityReport.majorInfestation}</p> */}
-          <p><strong>Estimated Crop Damage:</strong> {severityReport.cropDamage}%</p>
+          <p><strong>Estimated Crop Damage........?:</strong> {severityReport.cropDamage}%</p>
 
           <h3>Infestation Breakdown:</h3>
           <ul>
